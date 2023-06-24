@@ -1,0 +1,124 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-image: url("./images/Vaccpic3.jpeg");
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+
+
+        }
+
+        .container {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 4;
+
+        }
+
+        footer {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+
+        }
+
+        button {
+            background-color: #008CBA;
+            border: 1px solid black;
+            border-radius: 4px;
+
+        }
+
+        ul {
+            padding: 0px;
+        }
+
+        section {
+            margin: 0px;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            h5,
+            li {
+                font-size: 12px;
+            }
+
+        }
+
+
+
+        h5 {
+            color: deeppink;
+        }
+
+        li{
+            color: greenyellow;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h2>COVID19 Hospitalizations by Vaccine Status</h2> <br>
+            <h2> Assignment #2 / / </h2>
+
+            <button onclick="fetchVaccine()">Retrieve</button>
+            <button onclick="retrieveVaccine()">Status</button>
+            <p id="message"></p>
+            <p id="demmo"></p>
+        </header>
+
+        <section>
+
+
+
+            <ul>
+                <h5>
+                    MYTH: The ingredients in COVID-19 vaccines are dangerous.</h5>
+                <li>
+                    FACT: Nearly all the ingredients in COVID-19 vaccines are also ingredients in
+                    many foods – fats, sugars, and salts.
+                    <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/facts.html">Source</a>
+                </li>
+            </ul>
+        </section>
+
+
+
+    </div>
+    <footer>
+        <h4> / </h4>
+
+    </footer>
+
+
+    <script src="./js/main.js"></script>
+    <script src="./js/status.js"></script>
+</body>
+
+</html>
