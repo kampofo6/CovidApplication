@@ -1,5 +1,6 @@
 const xhttp = new XMLHttpRequest();
-xhttp.open("GET", "./dataFiles/profile.json", true);
+
+xhttp.open("GET", "/dataFiles/profile.json", true);
 
 xhttp.onreadystatechange = function() {
     if (xhttp.readyState === 4 && xhttp.status === 200) {
@@ -11,7 +12,6 @@ xhttp.onreadystatechange = function() {
 };
 
 xhttp.send();
-
 
 class Vaccine{ 
     constructor(id, date,
@@ -29,19 +29,16 @@ class Vaccine{
             this.nonicu_full_vac = nonicu_full_vac;
             this.stdId = stdId;
             var stdId = 991655245;
-
     }
-
-   
 }
-
 
 let vaccine = new Vaccine();
 
 function fetchVaccine() {
     let fError = '';
 
-    fetch('../dataFiles/vaccine.json')
+    // Use absolute path from root
+    fetch('/dataFiles/vaccine.json')
         .then(response => {
             if (!response.ok) {
                 console.error(`Response - ${response.status} ${response.statusText}`);
@@ -67,8 +64,6 @@ function fetchVaccine() {
                    var myVaccine = JSON.stringify(vaccine);
 
                    localStorage.setItem(vaccine.id, myVaccine)
-
-                   
                 }
             }
             else {
@@ -77,7 +72,7 @@ function fetchVaccine() {
         })
         .catch(error => {
             console.error(error);
-            // Handle the error appropriately
+            
         });
 
         var userMessage = document.getElementById('message');
@@ -85,7 +80,5 @@ function fetchVaccine() {
 }
 
 function retrieveVaccine(){
-
-    window.location ="../pages/status.html";
-    
+    window.location ="/pages/status.html";
 }
