@@ -1,4 +1,5 @@
 **COVID-19 Hospitalization Data Tracker (School Project)**
+
 A web application that displays COVID-19 hospitalization data by vaccination status from August 2021 to June 2022.
 
 **Features**
